@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# WordPress, PHP, and server logs
+debug.log
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build, cache, and coverage output
+build/
+dist/
+.cache/
+tmp/
+temp/
+coverage/
+.nyc_output/
+
+# Generated archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
