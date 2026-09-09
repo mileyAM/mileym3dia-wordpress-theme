@@ -1,36 +1,63 @@
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
+```gitignore
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+dist/
+build/
+target/
 
-# WordPress, PHP, and server logs
-debug.log
+# Dependencies
+.venv/
+venv/
+node_modules/
+.julia/
+zig-cache/
+.deps/
+
+# Logs and temp files
 *.log
-
-# Temporary files
 *.tmp
-*.temp
-*.bak
-*~
+*.swp
+*.swo
 
-# Editor and IDE files
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Build, cache, and coverage output
-build/
-dist/
-.cache/
-tmp/
-temp/
-coverage/
-.nyc_output/
+# OS specific
+.DS_Store
+Thumbs.db
 
-# Generated archives
-*.zip
-*.tar
-*.tar.gz
-*.tgz
-*.7z
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Python specific
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+.eggs/
+
+# Web specific
+*.min.js
+*.min.css
+.sass-cache/
+
+# Backup files
+*~
+\#*\#
+```
