@@ -3,8 +3,8 @@ Theme Name: MILEYM3DIA
 Theme URI: https://mileym3dia.com
 Author: MILEYM3DIA
 Author URI: https://mileym3dia.com
-Description: A premium custom WordPress theme for MILEYM3DIA creative media brand. Built with sophistication, creativity, and modern design principles.
-Version: 2.0.0
+Description: A bold, experimental creative media theme combining underground culture with premium design. Built for artists, creators, and brands making noise.
+Version: 3.0.0
 Requires at least: 6.0
 Requires PHP: 7.4
 Text Domain: mileym3dia
@@ -13,61 +13,79 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 /* ============================================
-   DESIGN TOKENS & CSS CUSTOM PROPERTIES
+   DESIGN TOKENS
    ============================================ */
 
 :root {
-    /* Brand Colors */
+    /* Brand Colors - Strategic Use */
     --m3-red: #EF252C;
     --m3-purple: #8B38DC;
     --m3-blue: #258DFF;
     --m3-lime: #D4F329;
     
-    /* Neutrals */
-    --m3-black: #050505;
-    --m3-charcoal: #0a0a0b;
-    --m3-slate: #121316;
-    --m3-graphite: #1a1c20;
-    --m3-stone: #25282e;
-    --m3-fog: #3d4148;
-    --m3-mist: #6b727a;
-    --m3-silver: #a0a5ad;
-    --m3-cloud: #d1d5db;
-    --m3-white: #f5f6f7;
+    /* Deep Black Foundation */
+    --m3-black: #000000;
+    --m3-void: #030303;
+    --m3-deep: #080808;
+    --m3-charcoal: #0d0d0f;
+    --m3-slate: #141418;
+    --m3-graphite: #1a1a1f;
+    --m3-stone: #222228;
     
-    /* Semantic Colors */
+    /* Whites & Grays */
+    --m3-white: #ffffff;
+    --m3-snow: #f5f5f5;
+    --m3-fog: #8a8a91;
+    --m3-mist: #6b6b72;
+    --m3-smoke: #4a4a50;
+    
+    /* Semantic */
     --m3-bg-primary: var(--m3-black);
-    --m3-bg-secondary: var(--m3-charcoal);
-    --m3-bg-tertiary: var(--m3-slate);
-    --m3-bg-card: var(--m3-graphite);
-    --m3-border: rgba(255, 255, 255, 0.08);
-    --m3-border-strong: rgba(255, 255, 255, 0.15);
+    --m3-bg-secondary: var(--m3-void);
+    --m3-bg-tertiary: var(--m3-deep);
+    --m3-bg-card: var(--m3-charcoal);
+    --m3-border: rgba(255, 255, 255, 0.06);
+    --m3-border-light: rgba(255, 255, 255, 0.12);
+    --m3-border-strong: rgba(255, 255, 255, 0.2);
     
-    /* Typography */
-    --m3-font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    --m3-font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    --m3-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    /* Typography Scale */
+    --text-xs: 0.6875rem;
+    --text-sm: 0.8125rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-4xl: 2.5rem;
+    --text-5xl: 3.5rem;
+    --text-6xl: 4.5rem;
+    --text-7xl: 6rem;
+    --text-8xl: 8rem;
+    --text-9xl: 10rem;
     
-    --m3-text-primary: var(--m3-white);
-    --m3-text-secondary: var(--m3-silver);
-    --m3-text-muted: var(--m3-mist);
+    /* Fonts */
+    --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     
     /* Spacing */
-    --m3-gutter: clamp(1.5rem, 5vw, 5rem);
-    --m3-max-width: 1440px;
-    --m3-content-width: 1200px;
+    --gutter: clamp(1.5rem, 4vw, 4rem);
+    --section-pad: clamp(4rem, 10vw, 8rem);
+    --max-width: 1600px;
+    --content-width: 1200px;
     
     /* Transitions */
-    --m3-transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    --m3-transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --m3-transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-fast: 0.15s var(--ease-out);
+    --transition-base: 0.3s var(--ease-out);
+    --transition-slow: 0.6s var(--ease-out);
     
     /* Effects */
-    --m3-blur: blur(12px);
-    --m3-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --m3-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --m3-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
-    --m3-shadow-xl: 0 24px 80px rgba(0, 0, 0, 0.6);
+    --blur-sm: blur(4px);
+    --blur-md: blur(12px);
+    --blur-lg: blur(24px);
+    --shadow-glow: 0 0 80px rgba(239, 37, 44, 0.3);
 }
 
 /* ============================================
